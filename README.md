@@ -30,6 +30,7 @@ python3 -m venv venv
 *(Note: You should see `(venv)` appear at the beginning of your terminal prompt).*
 
 **5. Install Project Dependencies**
+
 With the environment activated, install the locked requirements:
 ```bash
 pip install -r requirements.txt
@@ -50,3 +51,18 @@ If the terminal returns `No broken requirements found.`, your Python environment
 ```bash
 ollama pull llama3
 ```
+
+**9. Configure Environment Variables**
+
+Create a .env file in the root directory and add your API keys:
+``` bash
+OTX_API_KEY="your_alienvault_api_key_here"
+# NVD_API_KEY="your_nvd_api_key_here" #OPTIONAL
+# OTX_API_KEY="your_otx_api_key_here"
+```
+
+**10. Testing collectors**
+``` bash
+python -m tests.test_collectors  
+```
+
